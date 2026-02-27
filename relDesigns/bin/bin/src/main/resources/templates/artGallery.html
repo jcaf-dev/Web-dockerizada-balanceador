@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/disenios.css">
+</head>
+ 
+<body class="a">
+
+
+	  {{#client}}
+	    <ul class="a">
+	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
+	   <li class="b"><a href="/artGallery/{{name}}">Art Gallery</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
+	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
+	   </ul>
+	  {{/client}}
+	  
+	  {{^client}}
+	    <ul class="a">
+	  	<li class="b"><a class="active" href="/home">Home</a></li>
+	    <li class="b"><a href="/contact">Contact</a></li>
+	    <li class="b"><a href="/artGallery">Art Gallery</a></li>
+	    <li class="b"><a href="/shoppingCart">Shopping Cart</a></li>
+	    <li class="b"><a href="/login">Sing in</a></li>
+	    </ul>
+	  {{/client}}	
+
+  		{{#author}}
+		   <dl>
+		   
+			  <div class="box">
+			  <br>
+			  <dd>{{nameAuthor}}</dd>
+			  <br><br>
+			  
+			  {{#client}}
+			  <dd class="boton"><a href="/author/{{client.name}}/{{nameAuthor}}">See</a></dd>
+			  {{/client}}
+			  
+			  {{^client}}
+			  <dd class="boton"><a href="/author/{{nameAuthor}}">See</a></dd>
+			  {{/client}}
+			  </div>
+			   
+			</dl>
+		{{/author}}
+
+  			  
+  			  
+  			  
+
+			
+
+ 
+</body>
+ 
+</html>

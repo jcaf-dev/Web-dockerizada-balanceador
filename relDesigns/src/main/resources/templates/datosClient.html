@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/disenios.css">
+    <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+ 
+<body class="a">
+
+	<ul class="a">
+	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
+	   <li class="b"><a href="/artGallery/{{name}}">Art Gallery</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
+	</ul>
+	
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera"></div>
+ 
+            <div id="cuerpo">
+               
+                    {{#client}}
+                    	<p>Name: {{name}}</p>
+                    	<p>Surname: {{surname}}</p>
+                    	<p>Telephone: {{telephone}}</p>
+                    	<p>Mail: {{mail}}</p>
+                    	<p>Address: {{address}}</p>
+                    	<p>Password: {{password}}</p>
+                    {{/client}}
+                    
+                     <p class="boton"><a href="/logout">Cerrar Sesion</a></p>
+
+            </div>
+ 
+            <div id="pie"></div>
+        </div>
+ 
+    </div>
+    
+   	<script src="webjars/jquery/3.0.0/jquery.js"></script>
+	<script src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+</body>
+ 
+</html>

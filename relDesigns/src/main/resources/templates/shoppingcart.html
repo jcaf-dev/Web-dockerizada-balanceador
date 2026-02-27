@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/disenios.css">
+    <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+ 
+<body class="a">
+
+
+	  {{#client}}
+	    <ul class="a">
+	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
+	   <li class="b"><a href="/artGallery/{{name}}">Art Gallery</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
+	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
+	   </ul>
+	  {{/client}}
+	  
+	  {{^client}}
+	    <ul class="a">
+	  	<li class="b"><a class="active" href="/">Home</a></li>
+	    <li class="b"><a href="/contact">Contact</a></li>
+	    <li class="b"><a href="/artGallery">Art Gallery</a></li>
+	    <li class="b"><a href="/shoppingCart">Shopping Cart</a></li>
+	    <li class="b"><a href="/login">Sing in</a></li>
+	    </ul>
+	  {{/client}}		  
+			  
+		
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera"></div>
+ 
+            <div id="cuerpo">
+               
+                    {{#client}}
+                    	<p>Carrito de compra:</p>
+                    	
+                    	{{#client.carrito}}
+                    		<dl> 
+                    		<dd>{{.}}   <a href="/delete/{{name}}/{{.}}" class="boton2">  Delete </a></dd>
+                    		</dl>
+                    	{{/client.carrito}}
+                    	<p class="boton"><a href="/pay/{{name}}" >Pay</a></p>
+                    {{/client}}
+                    
+                    
+                    {{^client}}
+                    <p>Carrito de compra:</p>
+                    	<p class="boton"><a href="/shoppingCart">Pay</a></p>
+                    {{/client}}
+            </div>
+ 
+            <div id="pie"></div>
+        </div>
+        
+    </div>
+ <script src="webjars/jquery/3.0.0/jquery.js"></script>
+<script src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+			  
+</body>
+ 
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/disenios.css">
+</head>
+ 
+<body class="a">
+
+	<ul class="a">
+	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
+	   <li class="b"><a href="/artGallery/{{name}}">Art Gallery</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
+	</ul>
+	
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera"></div>
+ 
+            <div id="cuerpo">
+               
+                    {{#client}}
+                    	<p>Name: {{name}}</p>
+                    	<p>Surname: {{surname}}</p>
+                    	<p>Telephone: {{telephone}}</p>
+                    	<p>Mail: {{mail}}</p>
+                    	<p>Address: {{address}}</p>
+                    	<p>Password: {{password}}</p>
+                    {{/client}}
+                    
+                     <p class="boton"><a href="/">Cerrar Sesion</a></p>
+
+            </div>
+ 
+            <div id="pie"></div>
+        </div>
+ 
+    </div>
+ 
+</body>
+ 
+</html>

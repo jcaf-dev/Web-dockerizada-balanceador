@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/disenios.css">
+    <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+ 
+<body class="a">
+
+
+	  {{#client}}
+	    <ul class="a">
+	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
+	   <li class="b"><a href="/artGallery/{{name}}">Art Gallery</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
+	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
+	    </ul>
+	  {{/client}}
+	  
+	  {{^client}}
+	    <ul class="a">
+	  	<li class="b"><a class="active" href="/home">Home</a></li>
+	    <li class="b"><a href="/contact">Contact</a></li>
+	    <li class="b"><a href="/artGallery">Art Gallery</a></li>
+	    <li class="b"><a href="/shoppingCart">Shopping Cart</a></li>
+	    <li class="b"><a href="/login">Sing in</a></li>
+	      </ul>
+	  {{/client}}
+	  		  
+<br><br>
+
+<form id="form-contact" action="/contact/message" method="post">
+
+	  <div>
+	    <label for="name"><p>Your name:</p></label><br />
+	    <input id="name" class="input" name="name" type="text" value="" size="30" /><br /><br>
+	  </div>
+	  
+	  <div class="row">
+	  
+	    <label for="email"> <p>Your email:</p> </label><br />
+	    <input id="email" class="input" name="email" type="text" value="" size="30" /><br /><br>
+	  </div>
+	  
+	  <div class="row">
+	    <label for="message"> <p>Your message:</p> </label><br />
+	    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br /><br>
+	  </div>
+	  
+	  <input class="boton" id="submit_button" type="submit" value="Send email" />
+	  <input type="hidden" name="_csrf" value="{{token}}"/>    
+	         	    
+</form>
+
+	<script src="webjars/jquery/3.0.0/jquery.js"></script>
+	<script src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+			  
+</body>
+ 
+</html>

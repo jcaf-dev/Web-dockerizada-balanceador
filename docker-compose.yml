@@ -1,0 +1,83 @@
+version: "3"
+
+services:
+    haproxy:
+        image: haproxy:1.9.6
+        container_name: haproxy1
+        ports:
+            - 80:80
+            - 443:443
+        links:
+            - rel-web1
+            - rel-web2
+        volumes:
+            - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+            - "./haproxy/xip.io.pem:/etc/haproxy/xip.io.pem"
+        restart: unless-stopped
+
+    haproxyR:
+        image: haproxy:1.9.6
+        container_name: haproxy2
+        ports:
+            - 8090:8090
+        links:
+            - servicio-1
+            - servicio-2
+        volumes:
+            - "./haproxyServicio/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+        restart: unless-stopped
+    
+    db:
+        image: mysql:8.0.22
+        container_name: bbdd
+        environment:
+            MYSQL_DATABASE: 'relDesigns'
+            MYSQL_ROOT_PASSWORD: '1234'
+        ports:
+            - 3306:3306
+
+
+    rel-web1:
+        image: web:latest
+        build: ./relDesigns
+        container_name: web1
+        command: "--server.port=8443"
+        ports:
+            - 8443:8443
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/relDesigns
+        links:
+            - db
+        restart: unless-stopped
+
+    rel-web2:
+        build: ./relDesigns
+        container_name: web2
+        command: "--server.port=8444"
+        depends_on:
+            - rel-web1
+        ports:
+            - 8444:8444
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/relDesigns
+            - SPRING_JPA_HIBERNATE_DLL-AUTO=update
+        links:
+            - db
+        restart: unless-stopped
+
+
+    servicio-1:
+        image: servicio:latest
+        container_name: servicio1
+        build: ./Servicio_Interno
+        command: "--server.port=8011"
+        ports:
+            - 8011:8011
+
+    servicio-2:
+        image: servicio:latest
+        container_name: servicio2
+        build: ./Servicio_Interno
+        command: "--server.port=8012"
+        ports:
+            - 8012:8012

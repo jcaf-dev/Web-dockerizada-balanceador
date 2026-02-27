@@ -1,0 +1,317 @@
+ul.a{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #182130;
+}
+
+
+li.b {
+    float: left;
+}
+
+
+li.b a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.b a:hover {
+    background-color: #111;
+}
+
+
+body.a{
+ background-image: url("./images/fondo.jpg");
+
+}
+
+
+body{
+    background:#cc9;
+    /*background:#181907;*/
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin: 0;
+}
+ 
+#registrar{
+        float:left;
+        width:80%;
+        font-size:24px;
+        font-weight:bold;
+        color:#FFF;
+        text-align:right;
+}
+ 
+#envoltura{
+        position:absolute;
+    /*left y top al 50% para que quede centrado en la pantalla*/
+    left:50%;
+    top:50%;
+    margin-left:-165px;
+    margin-top: -210px;
+    width: 330px;
+ 
+}
+ 
+#contenedor{
+    background-color:#182130;
+    /*background-color:#356AA0;*/
+    /*box-shadow: 0 0 0 9px rgba(128,0,0,.1);*/
+    /*Margen de sombra alrededor del contenedor 8px negro*/
+    box-shadow: 3px 3px 10px 5px rgba(0,0,0,.8);
+    /*Las 3 líneas siguientes, sirven para el borde redondeado
+     * pero para diferentes navegadores*/
+    -webkit-border-radius:5px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+ 
+#cabecera{
+    /*linea azul que separa logo*/
+    /*color:#FFF;*/
+    height:30px;
+    line-height:50px;
+    text-align:center;
+}
+ 
+#cuerpo{
+    background:#ececec;
+    border:solid #ccc;
+    /*aumentando el 2px 'aparece' un borde*/
+    border-width: 2px 0;
+    padding:15px 35px;
+}
+ 
+label{
+    color: #666;
+    font-weight: bold
+}
+ 
+input{
+    /*border: 1px solid #999; No usar esta línea y dejar box-shadow hace efecto de profundidad*/
+    border-radius:5px; /*probar con 10px se hacen ovalados los inputs*/
+    box-shadow: 2px 2px 3px 1px rgba(0,0,0,.8);
+    font:bold 12px Arial, Helvetica, sans-serif;
+    height: 24px;
+    line-height: 20px;
+    padding:0 2px;
+    width: 230px;
+}
+ 
+input#usuario{
+    background:#ffc;                                                         
+   
+    padding-left: 10px;
+}
+ 
+input#contrasenia{
+    background:#ffc;
+    padding-left: 10px;
+ 
+}
+ 
+.boton{
+    background: #ccc;
+    /*background: -moz-linear-gradient(top,#eee,#ccc);*/
+    /*background: -moz-linear-gradient(top,#fc6,#f63);*/
+    background: -webkit-linear-gradient(top,#fc6,#f63);
+    background: linear-gradient(top,#fc6,#f63);
+    /*Color del texto*/
+    color: #666;
+    width: 120px;
+}
+ 
+/*Tip estas instrucciones animan al boton enviar
+ * para que se vea como si se pulsara*/
+.boton:active{
+    position: relative;
+    top: 3px;
+}
+
+.boton2{
+    background: #ff0000;
+    background: -moz-linear-gradient(top,#eee,#ccc);
+    background: -moz-linear-gradient(top,#fc6,#f63);
+
+    /*Color del texto*/
+    color: #000000;
+    width: 15px;
+}
+ 
+/*Tip estas instrucciones animan al boton enviar
+ * para que se vea como si se pulsara*/
+.boton2:active{
+    position: relative;
+    top: 3px;
+}
+
+
+ 
+#pie{
+    border-top: 5px solid #333;
+    color: #fff;
+    font-size: 11px;
+    height: 25px;
+    line-height: 24px;
+    text-align: center;
+}
+ 
+form,p{
+    margin:0;
+}
+ 
+p{
+    /*Para que los elementos del cuerpo
+     * se separen entre ellos probar con
+     * 10px 20px                      */
+    padding-bottom: 5px;
+}
+ 
+/*Para separar el botón de ingresar*/
+p#bot{
+    padding-top: 10px;
+}
+
+/*-------------------------- Slider --------------------------*/
+#slider {
+   margin: 0 auto;
+   width: 900px;
+   max-width: 100%;
+   text-align: center;
+}
+#slider input[type=radio] {
+   display: none;
+}
+#slider label {
+   cursor:pointer;
+   text-decoration: none;
+}
+
+#slides {
+   padding: 40px;
+   position: relative;
+   z-index: 1;
+}
+
+#overflow {
+   width: 100%;
+   overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+   margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+   margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+   margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+   margin-left: -300%;
+}
+#slides .inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;
+   line-height: 0;
+   height: 300px;
+}
+#slides .slide {
+   width: 25%;
+   float:left;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+#controls {
+   margin: -180px 0 0 0;
+   width: 100%;
+   height: 50px;
+   z-index: 3;
+   position: relative;
+}
+#controls label {
+   transition: opacity 0.2s ease-out;
+   display: none;
+   width: 50px;
+   height: 50px;
+   opacity: .4;
+}
+#controls label:hover {
+   opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+   float:right;
+   margin: -25 -50px 0 0;
+   display: block;
+}
+
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+   float:left;
+   margin: -25 0 0 -50px;
+   display: block;
+}
+#bullets {
+   margin: 150px 0 0;
+   text-align: center;
+}
+#bullets label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius:100%;
+   background: #ccc;
+   margin: 0 10px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+   background: #444;
+}
+@media screen and (max-width: 900px) {
+   #slide1:checked ~ #controls label:nth-child(2),
+   #slide2:checked ~ #controls label:nth-child(3),
+   #slide3:checked ~ #controls label:nth-child(4),
+   #slide4:checked ~ #controls label:nth-child(1),
+   #slide1:checked ~ #controls label:nth-last-child(2),
+   #slide2:checked ~ #controls label:nth-last-child(3),
+   #slide3:checked ~ #controls label:nth-last-child(4),
+   #slide4:checked ~ #controls label:nth-last-child(1) {
+      margin: 0;
+   }
+   #slides {
+      max-width: calc(100% - 140px);
+      margin: 0 auto;
+   }
+}
+
+.box {
+  background-color: lightgray;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+}
+
+.alternate {
+  box-sizing: border-box;
+}
+
+
+

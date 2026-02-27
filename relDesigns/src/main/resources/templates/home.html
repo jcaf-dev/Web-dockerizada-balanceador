@@ -1,0 +1,82 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/disenios.css">
+  <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="a">
+
+	  {{#client}}
+	    <ul class="a">
+	   <li class="b"><a class="active" href="/home2/{{name}}">Home</a></li>
+	   <li class="b"><a href="/contact/{{name}}">Contact</a></li>
+	   <li class="b"><a href="/artGallery/{{name}}">Art Gallery</a></li>
+	   <li class="b"><a href="/shoppingCart/{{name}}">Shopping Cart</a></li>
+	   <li class="b"><a href="/datosClient/{{name}}">{{name}}</a></li>
+	    </ul>
+	  {{/client}}
+	  
+	  {{^client}}
+	    <ul class="a">
+	  	<li class="b"><a class="active" href="/home">Home</a></li>
+	    <li class="b"><a href="/contact">Contact</a></li>
+	    <li class="b"><a href="/artGallery">Art Gallery</a></li>
+	    <li class="b"><a href="/shoppingCart">Shopping Cart</a></li>
+	    <li class="b"><a href="/login">Sing in</a></li>
+	      </ul>
+	  {{/client}}
+
+  
+   <div id="slider">
+   <input type="radio" name="slider" id="slide1" checked>
+   <input type="radio" name="slider" id="slide2">
+   <input type="radio" name="slider" id="slide3">
+   <input type="radio" name="slider" id="slide4">
+   
+   <div id="slides">
+      <div id="overflow">
+         <div class="inner">
+            <div class="slide slide_1">
+               <div class="slide-content">
+                  <img border="0" alt="Image Not Found" src="/images/imagen0.jpg" width="800" height="300">
+               </div>
+            </div>
+            <div class="slide slide_2">
+               <div class="slide-content">
+                   <img border="0" alt="Image Not Found" src="/images/imagen1.jpg" width="800" height="300">
+               </div>
+            </div>
+            <div class="slide slide_3">
+               <div class="slide-content">
+                   <img border="0" alt="Image Not Found" src="/images/imagen2.jpg" width="800" height="300">
+               </div>
+            </div>
+            <div class="slide slide_4">
+               <div class="slide-content">
+                   <img border="0" alt="Image Not Found" src="/images/imagen3.jpg" width="800" height="300">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+   <div id="bullets">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+</div>
+	<script src="webjars/jquery/3.0.0/jquery.js"></script>
+	<script src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

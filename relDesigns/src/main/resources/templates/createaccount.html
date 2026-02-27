@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="disenios.css">
+    <link rel="stylesheet" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+ 
+<body class="a">
+
+	<ul class="a">
+	  	<li class="b"><a class="active" href="/">Home</a></li>
+	    <li class="b"><a href="/contact">Contact</a></li>
+	    <li class="b"><a href="/artGallery">Art Gallery</a></li>
+	    <li class="b"><a href="/shoppingCart">Shopping Cart</a></li>
+	</ul>
+	
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera"></div>
+ 
+            <div id="cuerpo">
+ 
+                <form id="form-login" action="/newUser" method="post" >
+                    <p><label for="nombre">First Name:</label></p>
+                        <input name="name" type="text" id="nombre" class="nombre" autofocus="" /></p>
+ 
+                    <p><label for="apellidos">Surname:</label></p>
+                        <input name="surname" type="text" id="surname" class="apellidos" /></p>
+                        
+ 					<p><label for="telephone">Telephone:</label></p>
+                        <input name="telephone" type="tel" id="telephone" class="correo" placeholder="123 45 678"/></p>
+                        
+                    <p><label for="mail">Email:</label></p>
+                        <input name="mail" type="email" id="mail" class="correo" /></p>
+                        
+                    <p><label for="address">Address:</label></p>
+                        <input name="address" type="name" id="address" class="correo" /></p>
+ 
+                    <p><label for="password">Password:</label></p>
+                        <input name="password" type="password" id="password" class="pass"  /></p>
+
+                    <p id="bot"><input name="submit" type="submit" id="boton" value="Registrar" class="boton"/></p>
+                	<input type="hidden" name="_csrf" value="{{token}}">
+                </form>
+            </div>
+ 
+            <div id="pie">Not your computer? Use Guest mode to sign in privately.</div>
+        </div>
+ 
+    </div>
+   	<script src="webjars/jquery/3.0.0/jquery.js"></script>
+	<script src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+</body>
+ 
+</html>
