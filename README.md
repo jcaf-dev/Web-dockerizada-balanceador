@@ -72,41 +72,41 @@ Funciones que requieren autenticación:
 > Nota: Para evitar imágenes gigantes en GitHub, se usan etiquetas HTML con `width`.
 
 ### Home.html
-<img src="https://user-images.githubusercontent.com/63256402/111153803-ada62b80-8592-11eb-9ed2-d8ede9d6e978.png" width="650" alt="home">
+<img src="https://user-images.githubusercontent.com/63256402/111153803-ada62b80-8592-11eb-9ed2-d8ede9d6e978.png" width="350" alt="home">
 
 Página principal donde se exponen algunos cuadros y se muestra un pequeño resumen.
 
 ### Contact.html
-<img src="https://user-images.githubusercontent.com/63256402/111153896-cf071780-8592-11eb-8e38-8013229fe057.png" width="650" alt="contact">
+<img src="https://user-images.githubusercontent.com/63256402/111153896-cf071780-8592-11eb-8e38-8013229fe057.png" width="350" alt="contact">
 
 Página donde el usuario puede comunicarse con los administradores de la web (en progreso).
 
 ### ArtGallery.html
-<img src="https://user-images.githubusercontent.com/63256402/111154018-f958d500-8592-11eb-8e99-1db1e929be6c.png" width="650" alt="artgallery">
+<img src="https://user-images.githubusercontent.com/63256402/111154018-f958d500-8592-11eb-8e99-1db1e929be6c.png" width="350" alt="artgallery">
 
 Página en la que se exponen los autores y sus obras.
 
 ### ShoppingCart.html
-<img src="https://user-images.githubusercontent.com/63256402/111154248-4d63b980-8593-11eb-9d0a-04614a82a5ef.png" width="650" alt="cart">
+<img src="https://user-images.githubusercontent.com/63256402/111154248-4d63b980-8593-11eb-9d0a-04614a82a5ef.png" width="350" alt="cart">
 
 Página que muestra el carrito de compra vacío.
 
-<img src="https://user-images.githubusercontent.com/63256402/111154313-64a2a700-8593-11eb-95d1-4e6ba69849c4.png" width="650" alt="cartWithThings">
+<img src="https://user-images.githubusercontent.com/63256402/111154313-64a2a700-8593-11eb-95d1-4e6ba69849c4.png" width="350" alt="cartWithThings">
 
 Una vez que el cliente se registre podrá añadir productos al carrito.
 
 ### SignIn.html
-<img src="https://user-images.githubusercontent.com/63256402/111154371-72582c80-8593-11eb-9326-3f5ed419737a.png" width="650" alt="signIn">
+<img src="https://user-images.githubusercontent.com/63256402/111154371-72582c80-8593-11eb-9326-3f5ed419737a.png" width="350" alt="signIn">
 
 Página que permite acceder al usuario con sus credenciales.
 
 ### CreateAccount.html
-<img src="https://user-images.githubusercontent.com/63256402/111154595-adf2f680-8593-11eb-8c4b-61cfb4bd97b8.png" width="650" alt="createAccount">
+<img src="https://user-images.githubusercontent.com/63256402/111154595-adf2f680-8593-11eb-8c4b-61cfb4bd97b8.png" width="350" alt="createAccount">
 
 Página para nuevos usuarios en la que se piden datos del cliente.
 
 ### DatosClient.html
-<img src="https://user-images.githubusercontent.com/63256402/111154696-cd8a1f00-8593-11eb-9ad2-d3de76678644.png" width="650" alt="dataClient">
+<img src="https://user-images.githubusercontent.com/63256402/111154696-cd8a1f00-8593-11eb-9ad2-d3de76678644.png" width="350" alt="dataClient">
 
 Página que enseña los datos del cliente.
 
